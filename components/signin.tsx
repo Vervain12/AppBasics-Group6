@@ -44,22 +44,65 @@ export default function SignIn() {
 
         return(
             <View>
-                <Text> Sign In Here!</Text>
-                <TextInput
+                <Text style={styles.title_text}> Sign In Here!</Text>
+                <TextInput style={styles.field_box}
                     placeholder="Username"
                     value={username}
                     onChangeText={setUsername}
                 />
-                <TextInput
+                <TextInput style={styles.field_box2}
                     placeholder="Password"
                     value={password}
                     onChangeText={setPassword}
                 />
-                <Button title="Login" onPress={handleSignIn}/>
+                <View style={styles.login_button}>
+                    <Button title="Login" onPress={handleSignIn}/>
+                </View>
             </View>
         )
 }
 
 const styles = StyleSheet.create({
-    main: { flex: 1, justifyContent: "center"},
+    main: { 
+        flex: 1, 
+        justifyContent: "center"
+    },
+
+    field_box: { 
+        borderColor: "Black", 
+        borderWidth: 2.5, 
+        top: 240, 
+        width: 200, 
+        left: 75, 
+        height: 25
+    },
+
+    field_box2: { 
+        borderColor: "Black", 
+        borderWidth: 2.5, 
+        top: 245, 
+        width: 200, 
+        left: 75, 
+        height: 25
+    },
+
+    login_button: { 
+        top: 255, 
+        left: 110,
+        borderColor: "Blue",
+        borderWidth: 2.5,
+        width: 125,
+        height: 45,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10
+    },
+
+    title_text: {
+        top: 210, 
+        left: 100, 
+        fontSize: 23,
+        fontWeight: "bold"
+    }
 })
