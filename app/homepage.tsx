@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default homepage;
+export default WelcomeScreen;
