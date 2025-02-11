@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import CityInfo from '../components/CityInfo';
+import CityInfo from '../components/cityinfo';
 
 const CitiesTab = createBottomTabNavigator();
 
