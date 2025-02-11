@@ -1,11 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native';
-import { useState } from "react";
-import SignIn from '../components/signin';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import homepage from '../app/homepage';
+import signin from '../components/signin';
+const Stack = createStackNavigator();
 
-export default function App() {
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="SignIn">
+        <Stack.Screen name="signin" component={signin} />
+        <Stack.Screen name="homepage" component={homepage} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
-    return(
-        <SignIn/>
-    );
-}
+export default App;
