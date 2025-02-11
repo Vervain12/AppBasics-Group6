@@ -2,7 +2,14 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import CityLink from './CityLink';
 
-const CityInfo = ({ cityName, imageSource, link, info }) => {
+type CityProps = {
+  cityName: string;
+  imageSource: any; 
+  link: string;
+  info: string;
+};
+
+const CityInfo: React.FC<CityProps> = ({ cityName, imageSource, link, info }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.cityName}>{cityName}</Text>

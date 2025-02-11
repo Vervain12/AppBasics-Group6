@@ -1,7 +1,11 @@
 import React from 'react';
 import { Linking, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const CityLink = ({ link }) => {
+type CityLinkProps = {
+  link: string;
+};
+
+const CityLink: React.FC<CityLinkProps> = ({ link }) => {
   const handlePress = () => {
     Linking.openURL(link);
   };
