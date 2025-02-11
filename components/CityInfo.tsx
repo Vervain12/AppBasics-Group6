@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
-import CityLink from './citylink';
+import CityLink from './CityLink';
 
 type CityProps = {
   cityName: string;
